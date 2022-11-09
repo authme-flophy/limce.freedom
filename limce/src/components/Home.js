@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 
-import vid from "./../Assets/video.mp4"
+
 
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
     <div className='banner'>
       <video autoPlay muted loop>
         {/* <source src="../../media/concert.mp4" type='video/mp4' /> */}
-        <source src={vid} type='video/mp4' />
+        <source src='https://res.cloudinary.com/dphlf7a8o/video/upload/v1668015282/video_awsci0.mp4' type='video/mp4' />
       </video>
       <nav className='nav'>
         <h1><span id='limce'>Limce</span>.<span id='freedom'>Freedom</span></h1>
