@@ -38,19 +38,19 @@ recusandae alias error harum maxime adipisci amet laborum. Perspiciatis
     <h1 id='album_header'>LATEST RELEASES</h1>
     <div className='album_container'>
       <div className='album'>
-        <img className='image' src='https://i.ibb.co/DDGs5qP/her-loss.jpg' alt='her_loss' />
+        <img className='image' src='https://res.cloudinary.com/dphlf7a8o/image/upload/v1668016652/her_loss_zlnjnz.jpg' alt='her_loss' />
         <div className="middle">
           <div className="text">John Doe</div>
         </div>
       </div>
       <div className='album'>
-        <img className='image' src='https://i.ibb.co/DDGs5qP/her-loss.jpg' alt='her_loss' />
+        <img className='image' src='https://res.cloudinary.com/dphlf7a8o/image/upload/v1668016652/her_loss_zlnjnz.jpg' alt='her_loss' />
         <div className="middle">
           <div className="text">John Doe</div>
         </div>
       </div>
       <div className='album'>
-        <img className='image' src='https://i.ibb.co/DDGs5qP/her-loss.jpg' alt='her_loss' />
+        <img className='image' src='https://res.cloudinary.com/dphlf7a8o/image/upload/v1668016652/her_loss_zlnjnz.jpg' alt='her_loss' />
         <div className="middle">
           <div className="text">John Doe</div>
         </div>
