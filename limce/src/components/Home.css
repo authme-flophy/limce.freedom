@@ -1,17 +1,131 @@
-.home_container{
-    background-image: url('https://cdn.wallpapersafari.com/39/92/FoXNny.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    height: 100vh;
-    width: 100%;
+*, *::after, *::before {
+    margin: 0;
+}
+
+.banner{
+    align-items: center;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     box-shadow: inset 0 0 0 1000px rgba(0,0, 0, 0.2);
-    object-fit: contain;
+    position: relative;
 }
-.home_container > h1 {
+
+.banner video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+    background-blend-mode: darken;
+}
+
+.glass{
+    z-index: 1;
+    background: rgba(94, 73, 172, 0.31);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.4px);
+    -webkit-backdrop-filter: blur(6.4px);
+    border: 1px solid rgba(94, 73, 172, 0.3);
+max-width: 50%;
+font-size: 1.5rem;
+margin-top: 2rem;
+}
+
+.glass > p {
+    margin: 1.5rem;
+    text-align: center;
+}
+
+.nav {
+    z-index: 1;
+    width: 100%;
+    align-items: center;
+    background: rgba(94, 73, 172, 0.31);
+    backdrop-filter: blur(5.7px);
+-webkit-backdrop-filter: blur(5.7px);
+position: relative;
+}
+
+.nav > h1 {
+    z-index: 1;
     color: aqua;
-    font-size: 50px;
-    
+    margin: 1rem 0;
+    font-size: 32px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
+
+#limce {
+    color: #fed000;
+}
+
+#banner-header {
+    margin-top: 2rem;
+    font-size: 48px;
+    text-align: center;
+}
+
+.home_container {
+    background-color: rgb(33, 21, 80);
+}
+
+#album_header {
+    margin-top: 1rem;
+    text-align: center;
+    color: yellow;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.album_container {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.album {
+    margin: 1rem;
+    border-radius: 10px;
+    position: relative;
+    /* width: 50%; */
+    overflow: hidden;
+}
+
+.image {
+    opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  transition: .2s all ease-in-out;
+}
+
+.text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.album:hover .image {
+    opacity: 0.3;
+    transform: scale(1.1);
+  }
+  
+  .album:hover .middle {
+    opacity: 1;
+  }
+/* 
+.image:hover {
+    transform: scale(1.1);
+} */
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
