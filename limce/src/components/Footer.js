@@ -1,6 +1,7 @@
 import React from 'react'
 import MiniFooter from './MiniFooter'
 import { FiPlay } from 'react-icons/fi'
+// import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
           ready to listen?
         </h2>
         <div className='plan-sections'>
-          <div className='plan'>
+          <div className='plan fade-in-left'>
             <h2>free plan</h2>
             <p>Everything you want to listen to and one or two adverts.</p>
             <p>Free forever</p>
@@ -21,7 +22,7 @@ const Footer = () => {
               <button className='plan-btn'>get free</button>
             </div>
           </div>
-          <div className='plan'>
+          <div className='plan fade-in-right'>
             <h2>premium</h2>
             <p>
               The music you love.<br></br>Everywhere.
@@ -30,7 +31,7 @@ const Footer = () => {
               $8.99 / <span>month.</span>
             </p>
             <div className='btn-container'>
-              <button className='plan-btn'>Try premium</button>
+              <button className='plan-btn'>premium</button>
             </div>
           </div>
         </div>

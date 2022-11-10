@@ -1,5 +1,10 @@
 /* importing google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+}
 
 .App {
   text-align: center;
@@ -46,7 +51,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 .main-footer {
-  background-color: black;
+  background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
   color: whitesmoke;
   width: 90%;
   margin: auto;
@@ -61,6 +66,34 @@ body {
   margin-bottom: -2rem;
   letter-spacing: 1px;
   font-weight: 900;
+  animation: animate-header 4s both;
+}
+
+@keyframes animate-header {
+  0% {
+    opacity: 0;
+    transform: translateX(-5vh);
+    transform: translateY(5vh);
+  }
+  33% {
+    opacity: 0.3;
+    /* transform: translateX(5vw);
+    transform: translateY(-5vh); */
+    transform: rotate(25deg);
+    transform-origin: 50% 50%;
+  }
+  66% {
+    opacity: 0.6;
+    /* transform: translateX(5vw);
+    transform: translateY(5vh); */
+    transform: rotate(-25deg);
+    transform-origin: 50% 50%;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
+  }
 }
 .main-footer .footer-heading .play-icon {
   font-size: 1.4rem;
@@ -72,7 +105,7 @@ body {
   justify-content: center;
 }
 .plan-sections .plan {
-  background-color: gray;
+  background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
   width: 30%;
   margin: 1.5rem;
   display: flex;
@@ -95,10 +128,42 @@ body {
 .plan-sections .plan .plan-btn {
   cursor: pointer;
   padding: 0.6rem;
-  width: 40%;
+  width: 6rem;
+  margin-top: 1rem;
+  text-align: center;
   border-radius: 50px;
   border: 1px solid white;
   text-transform: uppercase;
+}
+
+.fade-in-right {
+  /* animating the div */
+  animation: fadeInRight 4s both;
+}
+.fade-in-left {
+  /* animating the div */
+  animation: fadeInLeft 4s both;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .plan-sections .plan .plan-btn:hover {
@@ -137,4 +202,11 @@ body {
 }
 .twitter-handles .handle {
   margin-right: 0.8rem;
+}
+
+.copy-right {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  color: #fff;
 }

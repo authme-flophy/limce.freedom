@@ -7,14 +7,9 @@ const MiniFooter = () => {
     <>
       <div className='mini-footer'>
         <ul>
-          <li>
-            <a href='#'>
-              &copy; limce<span>freedom</span>
-            </a>
-          </li>
-          <li>
+          {/* <li>
             <a href='#'>Features</a>
-          </li>
+          </li> */}
           <li>
             <a href='#'>Album</a>
           </li>
@@ -31,6 +26,11 @@ const MiniFooter = () => {
             <a href='#'>Contact</a>
           </li>
         </ul>
+        <div className='copy-right'>
+          <p>
+            &copy; limce<span>freedom</span>
+          </p>
+        </div>
 
         <div className='twitter-handles'>
           <BsTwitter className='handle' />
