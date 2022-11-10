@@ -22,7 +22,7 @@
 
 .glass{
     z-index: 0;
-    background: rgba(94, 73, 172, 0.31);
+    background: rgba(90, 73, 170, 0.20);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.4px);
@@ -30,37 +30,34 @@
     border: 1px solid rgba(94, 73, 172, 0.3);
     max-width: 50%;
     font-size: 1.5rem;
-    margin-top: 100px;
+    margin-top: 180px;
     overflow: hidden;
 }
 
 .glass > p {
-    margin: 8px;
+    margin: 60px;
     text-align: center;
     font-size: 25px;
-    font-family: 'Trebuchet MS', 
-    'Lucida Sans Unicode',
-    'Lucida Grande',
+    font-family: 'Lucida Sans Unicode','Lucida Grande',
     'Lucida Sans',
     Arial,
     sans-serif;
-    /* margin-top: 32px; */
-    font-weight: bolder;
+    margin-top: 32px;
 }
 
 .nav {
     z-index: 1;
     width: 100%;
     align-items: center;
-    background: rgba(94, 73, 172, 0.31);
+    background: #3A3B3C;
     backdrop-filter: blur(5.7px);
--webkit-backdrop-filter: blur(5.7px);
-position: relative;
+    -webkit-backdrop-filter: blur(5.7px);
+    position: relative;
 }
 
 .nav > h1 {
     z-index: 1;
-    color: aqua;
+    color: rgb(165, 167, 50);
     margin: 1rem 0;
     font-size: 32px;
     font-family: 'Courier New', Courier, monospace;
@@ -68,7 +65,7 @@ position: relative;
 }
 
 #limce {
-    color: #f1e8b8;
+    color: #ffff;
 }
 
 #banner-header {
@@ -78,15 +75,15 @@ position: relative;
 }
 
 .home_container {
-    background-color: #3e2f5b;
     display: flex;
     flex-direction: column;
+    background-image: url(/home/doreen/limce.freedom/limce/src/Media/albumpic.jpg);
 }
 
 #album_header {
     margin-top: 1rem;
     text-align: center;
-    color: #f1e8b8;
+    color: #fff;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -98,6 +95,14 @@ position: relative;
     align-self: center;
     max-width: 1500px;
 }
+/* .back-image{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 
 .album {
     margin: 1rem;

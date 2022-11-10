@@ -19,7 +19,9 @@ function Home() {
         <h1><span id='limce'>Limce</span>.<span id='freedom'>Freedom</span></h1>
       </nav>
         <div className='glass'>
-      
+          <p>
+            Lots of people prefer to listen to the music online, from some website or application and the number of radio listeners is decreasing. Limce Freedom offers  a dynamic look which is just perfect for a listeners to listen to their choice of song, musical band, DJs, netlabels, or artists to display their work in an exciting way.
+          </p>
         </div>
 
       {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/Skzb6jNN0OU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
@@ -27,6 +29,7 @@ function Home() {
     </div>
     <h1 id='album_header'>LATEST RELEASES</h1>
     <div className='album_container'>
+      {/* <div className='back-image'></div> */}
       <div className='album'>
         <img className='image' src='https://res.cloudinary.com/dphlf7a8o/image/upload/v1668016652/her_loss_zlnjnz.jpg' alt='her_loss' />
         <div className="middle">
