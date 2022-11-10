@@ -77,7 +77,7 @@
 .home_container {
     display: flex;
     flex-direction: column;
-    background-image: url(/home/doreen/limce.freedom/limce/src/Media/albumpic.jpg);
+    background-image: url(https://res.cloudinary.com/dqzudkxg1/image/upload/v1668081523/albumpic_vthig7.jpg);
 }
 
 #album_header {
