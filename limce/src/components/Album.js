@@ -55,9 +55,9 @@ const Album = () => {
           </div>
         </div>
         <div className="add-review">
-          <form>
-            <textarea name="your-review" cols="50" rows="6"></textarea>
-            <button type="submit"></button>
+          <form className="form-review">
+            <textarea name="your-review" cols="50" rows="6" placeholder="type..."></textarea>
+            <button type="submit" className="submit-btn">Add Review</button>
           </form>
 
         </div>
