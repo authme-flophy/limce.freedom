@@ -1,3 +1,11 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +43,170 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* footer section */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.main-footer {
+  background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+  color: whitesmoke;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+}
+.main-footer .footer-heading {
+  margin-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  margin-bottom: -2rem;
+  letter-spacing: 1px;
+  font-weight: 900;
+  animation: animate-header 4s both;
+}
+
+@keyframes animate-header {
+  0% {
+    opacity: 0;
+    transform: translateX(-5vh);
+    transform: translateY(5vh);
+  }
+  33% {
+    opacity: 0.3;
+    /* transform: translateX(5vw);
+    transform: translateY(-5vh); */
+    transform: rotate(25deg);
+    transform-origin: 50% 50%;
+  }
+  66% {
+    opacity: 0.6;
+    /* transform: translateX(5vw);
+    transform: translateY(5vh); */
+    transform: rotate(-25deg);
+    transform-origin: 50% 50%;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
+  }
+}
+.main-footer .footer-heading .play-icon {
+  font-size: 1.4rem;
+  margin-right: 0.8rem;
+}
+.plan-sections {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.plan-sections .plan {
+  background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+  width: 30%;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+}
+
+.plan-sections .plan:hover {
+  border: 1px solid orange;
+}
+
+.plan-sections .plan h2 {
+  text-transform: uppercase;
+}
+.plan-sections .plan p {
+  letter-spacing: 1px;
+  line-height: 1.6rem;
+}
+
+.plan-sections .plan .plan-btn {
+  cursor: pointer;
+  padding: 0.6rem;
+  width: 6rem;
+  margin-top: 1rem;
+  text-align: center;
+  border-radius: 50px;
+  border: 1px solid white;
+  text-transform: uppercase;
+}
+
+.fade-in-right {
+  /* animating the div */
+  animation: fadeInRight 4s both;
+}
+.fade-in-left {
+  /* animating the div */
+  animation: fadeInLeft 4s both;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.plan-sections .plan .plan-btn:hover {
+  background-color: orange;
+  transition: 1.5s ease-in-out;
+  color: aliceblue;
+}
+.btn-container {
+  margin-top: auto;
+}
+
+.mini-footer {
+  position: relative;
+  background-color: #282c34;
+}
+.mini-footer ul {
+  list-style: none;
+  display: flex;
+}
+.mini-footer ul li {
+  padding: 0.2rem;
+  margin-right: 0.8rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+.mini-footer ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.twitter-handles {
+  position: absolute;
+  right: 5%;
+  top: 0;
+  color: #fff;
+}
+.twitter-handles .handle {
+  margin-right: 0.8rem;
+}
+
+.copy-right {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  color: #fff;
 }
