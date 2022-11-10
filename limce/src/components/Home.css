@@ -21,21 +21,31 @@
 }
 
 .glass{
-    z-index: 1;
+    z-index: 0;
     background: rgba(94, 73, 172, 0.31);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.4px);
+    backdrop-filter: blur(7.4px);
     -webkit-backdrop-filter: blur(6.4px);
     border: 1px solid rgba(94, 73, 172, 0.3);
-max-width: 50%;
-font-size: 1.5rem;
-margin-top: 2rem;
+    max-width: 50%;
+    font-size: 1.5rem;
+    margin-top: 100px;
+    overflow: hidden;
 }
 
 .glass > p {
-    margin: 1.5rem;
+    margin: 8px;
     text-align: center;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif;
+    /* margin-top: 32px; */
+    font-weight: bolder;
 }
 
 .nav {
@@ -58,7 +68,7 @@ position: relative;
 }
 
 #limce {
-    color: #fed000;
+    color: #f1e8b8;
 }
 
 #banner-header {
@@ -68,13 +78,15 @@ position: relative;
 }
 
 .home_container {
-    background-color: rgb(33, 21, 80);
+    background-color: #3e2f5b;
+    display: flex;
+    flex-direction: column;
 }
 
 #album_header {
     margin-top: 1rem;
     text-align: center;
-    color: yellow;
+    color: #f1e8b8;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -83,6 +95,8 @@ position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-self: center;
+    max-width: 1500px;
 }
 
 .album {
@@ -91,14 +105,18 @@ position: relative;
     position: relative;
     /* width: 50%; */
     overflow: hidden;
+    width: 300px;
+    height: 300px;
 }
 
 .image {
     opacity: 1;
   display: block;
+  width: 100%;
   transition: .5s ease;
   backface-visibility: hidden;
   transition: .2s all ease-in-out;
+  height: 100%;
 }
 
 .text {
