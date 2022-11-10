@@ -51,11 +51,12 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 .main-footer {
-  background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+  background: rgba(100, 70, 100, 11.20);
   color: whitesmoke;
-  width: 90%;
+
   margin: auto;
   padding: 2rem;
+
 }
 .main-footer .footer-heading {
   margin-top: 2rem;
@@ -177,7 +178,7 @@ body {
 
 .mini-footer {
   position: relative;
-  background-color: #282c34;
+  background-color: rgba(80, 70, 100, 11.20);
 }
 .mini-footer ul {
   list-style: none;

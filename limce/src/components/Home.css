@@ -57,7 +57,7 @@
 
 .nav > h1 {
     z-index: 1;
-    color: rgb(165, 167, 50);
+    color: rgba(120, 70, 100, 11.20);
     margin: 1rem 0;
     font-size: 32px;
     font-family: 'Courier New', Courier, monospace;
@@ -83,7 +83,7 @@
 #album_header {
     margin-top: 1rem;
     text-align: center;
-    color: #fff;
+    color: #ffff;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 

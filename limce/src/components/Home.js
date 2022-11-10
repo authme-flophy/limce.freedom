@@ -12,7 +12,9 @@ function Home() {
         <source src='https://res.cloudinary.com/dqzudkxg1/video/upload/v1668081308/video1_sn7arc.mp4' />
       </video>
       <nav className='nav'>
-        <h1><span id='limce'>Limce</span>.<span id='freedom'>Freedom</span></h1>
+        <h1>
+          <span id='limce'>Limce</span>.<span id='freedom'>Freedom</span>
+          </h1>
       </nav>
         <div className='glass'>
           <p>
