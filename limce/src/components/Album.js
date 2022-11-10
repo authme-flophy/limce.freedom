@@ -7,7 +7,7 @@ const Album = () => {
       <div className="album_content">
         <div className="album_image">
           <img
-            className="image"
+            className="image-card"
             src="https://media.pitchfork.com/photos/62bdd2cb9e0c39ec09d73fd7/master/pass/Beyonce-Renaissance.jpg"
             alt="her_loss"
           />
