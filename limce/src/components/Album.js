@@ -6,20 +6,26 @@ const Album = () => {
   <div className='album_container'>
     <div className='album_content'>
       <div className='album_image'>
-        <img className='image' src='https://res.cloudinary.com/dphlf7a8o/image/upload/v1668016652/her_loss_zlnjnz.jpg' alt='her_loss' />
+        <img className='image' src='https://media.pitchfork.com/photos/62bdd2cb9e0c39ec09d73fd7/master/pass/Beyonce-Renaissance.jpg' alt='her_loss' />
       </div>
       <ul className='songs'>
         <li>
-          <a href='#'>trending</a>
+          <a href='#'>song1</a>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elite.</p>
           </li>
         <li>
-          <a href='#'>popular</a>
+          <a href='#'>song2</a>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elite.</p>
           </li>
         <li>
-          <a href='#'>liked</a>
+          <a href='#'>song3</a>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elite.</p>
           </li>
         <li>
-          <a href='#'>playlist</a>
+          <a href='#'>song3</a>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elite.</p>
+        
+        
         </li>
 
       </ul>
