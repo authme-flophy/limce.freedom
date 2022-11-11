@@ -7,6 +7,13 @@ const Album = () => {
   const [currentAlbum, setCurrentAlbum] = useState({})
   const [hasLoaded, setHasLoaded] = useState()
   const [song, setSong] = useState()
+  const [myReview, setMyReview] = useState({
+    user_name: '',
+    review_data: {
+      comment: '',
+      song_id: '',
+    },
+  })
   const [iframeUrl, setIframeUrl] = useState()
 
   useEffect(() => {
@@ -15,12 +22,25 @@ const Album = () => {
       .then((data) => {
         setCurrentAlbum((currentAlbum) => ({ ...currentAlbum, data }))
         setHasLoaded(true)
+        // setMyReview((myReview) => ({
+        //   ...myReview,
+        //   review_data: {
+        //     ...myReview.review_data,
+        //     song_id: currentAlbum.data.songs[0].id,
+        //   },
+        // }))
       })
   }, [id])
 
   const handleSongClicked = (song) => {
+    console.log(song)
     setSong(song)
     setIframeUrl(song.iframe_url)
+  }
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault()
+    console.log(myReview)
   }
   return (
     <>
@@ -85,12 +105,40 @@ const Album = () => {
                   })}
             </div>
             <div className='add-review'>
-              <form className='form-review'>
+              <form
+                className='form-review'
+                onSubmit={(e) => {
+                  handleFormSubmit(e)
+                }}
+              >
+                <div className='input-name-sec'>
+                  <label htmlFor='u-name'>Name:</label>
+                  <input
+                    type='text'
+                    name='name'
+                    id='u-name'
+                    onChange={(e) => {
+                      setMyReview((myReview) => ({
+                        ...myReview,
+                        user_name: e.target.value,
+                      }))
+                    }}
+                  />
+                </div>
                 <textarea
                   name='your-review'
                   cols='50'
                   rows='6'
                   placeholder='type...'
+                  onChange={(e) => {
+                    setMyReview((myReview) => ({
+                      ...myReview,
+                      review_data: {
+                        comment: e.target.value,
+                        song_id: song.id,
+                      },
+                    }))
+                  }}
                 ></textarea>
                 <button type='submit' className='submit-btn'>
                   Add Review
