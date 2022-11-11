@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path='/' index element={<Home />} />
         <Route path='/albums' element={<Album />}>
-          <Route path=':songId' element={<Home />} />
+          <Route path='/albums/:id' element={<Album />} />
         </Route>
       </Routes>
       <Footer />
