@@ -52,8 +52,8 @@ function Home() {
               className='album'
               onClick={() => handleAlbumClick(album.id)}
             >
-              <img src={album.image_url} alt={album.name} />
-              <h2>{album.name}</h2>
+              <img className='image' src={album.image_url} alt={album.name} />
+              <h2 className='middle'>{album.name}</h2>
             </div>
           )
         })}
