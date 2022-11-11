@@ -22,25 +22,29 @@ const Album = () => {
       .then((data) => {
         setCurrentAlbum((currentAlbum) => ({ ...currentAlbum, data }))
         setHasLoaded(true)
-        // setMyReview((myReview) => ({
-        //   ...myReview,
-        //   review_data: {
-        //     ...myReview.review_data,
-        //     song_id: currentAlbum.data.songs[0].id,
-        //   },
-        // }))
       })
   }, [id])
 
   const handleSongClicked = (song) => {
-    console.log(song)
     setSong(song)
     setIframeUrl(song.iframe_url)
   }
 
   const handleFormSubmit = (e) => {
     e.preventDefault()
+    e.target.reset()
     console.log(myReview)
+    fetch(`http://localhost:9292/reviews`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(myReview),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+      })
   }
   return (
     <>
@@ -117,6 +121,7 @@ const Album = () => {
                     type='text'
                     name='name'
                     id='u-name'
+                    required
                     onChange={(e) => {
                       setMyReview((myReview) => ({
                         ...myReview,
@@ -130,12 +135,13 @@ const Album = () => {
                   cols='50'
                   rows='6'
                   placeholder='type...'
+                  required
                   onChange={(e) => {
                     setMyReview((myReview) => ({
                       ...myReview,
                       review_data: {
                         comment: e.target.value,
-                        song_id: song.id,
+                        song_id: song ? song.id : currentAlbum.data.songs[0].id,
                       },
                     }))
                   }}
