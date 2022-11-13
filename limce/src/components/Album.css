@@ -137,3 +137,34 @@
   padding: 0.7rem;
   transition: 1s ease-in-out all;
 }
+
+#heart-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: red;
+  animation: heartbeat 3s linear 2s infinite normal both;
+}
+
+@keyframes heartbeat {
+  55% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.05);
+    opacity: 0.3;
+  }
+  85% {
+    transform: scale(1.45);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.liked-video {
+  fill: red;
+  width: 2.5rem;
+}
