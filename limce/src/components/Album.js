@@ -4,11 +4,12 @@ import './Album.css'
 
 const Album = () => {
   const { id } = useParams()
+  const [count, setCount] = useState(0)
   const [currentAlbum, setCurrentAlbum] = useState({})
   const [hasLoaded, setHasLoaded] = useState()
   const [isLiked, setIsLiked] = useState(false)
-  const [likesCount, setLikesCount] = useState(11)
-  const [song, setSong] = useState()
+  const [likesCount, setLikesCount] = useState(0)
+  const [song, setSong] = useState(null)
   const [myReview, setMyReview] = useState({
     user_name: '',
     review_data: {
@@ -26,49 +27,51 @@ const Album = () => {
         setCurrentAlbum((currentAlbum) => ({ ...currentAlbum, data }))
         setHasLoaded(true)
       })
-  }, [id])
+  }, [id, likesCount])
 
   const handleSongClicked = (song) => {
     setSong(song)
     setIframeUrl(song.iframe_url)
     setLikesCount(song.likes)
+    setIsLiked(false)
   }
-
+  console.log(song)
   const handleLikeClick = () => {
     setIsLiked(!isLiked)
-    isLiked
-      ? setLikesCount((likesCount) => likesCount + 1)
-      : setLikesCount((likesCount) => likesCount - 1)
+    setSong(currentAlbum.data.songs[0])
+    isLiked ? setLikesCount(likesCount - 1) : setLikesCount(likesCount + 1)
     console.log(song)
-    song
-      ? fetch(`http://localhost:9292/songs/${song.id}`, {
-          method: 'PATCH',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            ...song,
-            likes: likesCount,
-          }),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data)
-          })
-      : fetch(`http://localhost:9292/songs/${currentAlbum.data.songs[0].id}`, {
-          method: 'PATCH',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            ...song,
-            likes: likesCount,
-          }),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data)
-          })
+    // song
+    fetch(`http://localhost:9292/songs/${song.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        ...song,
+        likes: likesCount,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        setCount(count + 1)
+      })
+    // : fetch(`http://localhost:9292/songs/${currentAlbum.data.songs[0].id}`, {
+    //     method: 'PATCH',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //       ...song,
+    //       likes: likesCount,
+    //     }),
+    //   })
+    //     .then((res) => res.json())
+    //     .then((data) => {
+    //       console.log(data)
+    //       setCount(count + 1)
+    //     })
   }
 
   const handleFormSubmit = (e) => {
@@ -134,43 +137,25 @@ const Album = () => {
               )}
             </div>
             <div className='heart-icon' onClick={handleLikeClick}>
-              {isLiked ? (
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke-width='1.5'
-                  stroke='currentColor'
-                  class='w-6 h-6'
-                  id='heart-icon'
-                  className='liked-video'
-                >
-                  <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    d='M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z'
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke-width='1.5'
-                  stroke='currentColor'
-                  class='w-6 h-6'
-                  id='heart-icon'
-                >
-                  <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    d='M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z'
-                  />
-                </svg>
-              )}
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke-width='1.5'
+                stroke='currentColor'
+                class='w-6 h-6'
+                id='heart-icon'
+                className={isLiked ? 'liked-video' : null}
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  d='M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z'
+                />
+              </svg>
               {song ? (
                 <p>
-                  {song.likes} <span>likes</span>
+                  {likesCount} <span>likes</span>
                 </p>
               ) : (
                 <p>
