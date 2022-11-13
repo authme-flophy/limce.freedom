@@ -16,7 +16,7 @@
   color: paleturquoise;
   justify-content: center;
   display: flex;
-  padding: 2rem;
+  padding: 3rem;
 }
 .album_content {
   background-color: rgba(34, 34, 34, 0);
@@ -24,7 +24,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
 }
 
 .album_image {
