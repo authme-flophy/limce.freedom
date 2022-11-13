@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import './Album.css'
+
+
 
 const Album = () => {
   const { id } = useParams()
@@ -88,10 +90,18 @@ const Album = () => {
       })
     window.locate.refresh()
   }
+  const navigate = useNavigate()
+  const handleHomeBtn=() => {
+  navigate("/")
+  }
   return (
     <>
-      {hasLoaded ? (
+      {hasLoaded ?(
         <div className='album_container'>
+          <div className='history-btn'>
+            <button onClick={handleHomeBtn}>Home</button>
+          </div>
+       
           <div className='album_content'>
             <div className='album_image'>
               <img
