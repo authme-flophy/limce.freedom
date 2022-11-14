@@ -172,3 +172,13 @@
   fill: red;
   width: 2.5rem;
 }
+.history-btn > button{
+background-color:aquamarine;
+border-radius: 10px;
+font-size: 20px;
+font-family: 'Courier New', Courier, monospace;
+transition: all .2s ease-in-out;
+}
+.history-btn > button:hover{
+  transform: scale(1.2);
+}

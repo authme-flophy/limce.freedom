@@ -1,6 +1,8 @@
+import { useNavigate, useParams } from 'react-router-dom'
 import React, { useEffect, useReducer, useState } from 'react'
-import { useParams } from 'react-router-dom'
 import './Album.css'
+
+
 
 const Album = () => {
   const { id } = useParams()
@@ -164,6 +166,12 @@ const Album = () => {
 
     e.target.reset()
   }
+  
+  const navigate = useNavigate()
+  const handleHomeBtn=() => {
+  navigate("/")
+  }
+
   console.log(myReview)
   return (
     <>
@@ -171,6 +179,9 @@ const Album = () => {
         <p>Loading...</p>
       ) : (
         <div className='album_container'>
+        <div className='history-btn'>
+            <button onClick={handleHomeBtn}>Home</button>
+          </div>
           <div className='header'>
           <h1>Albums</h1>
           </div>
