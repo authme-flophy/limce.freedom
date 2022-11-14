@@ -8,7 +8,10 @@ const Album = () => {
   const [songs, setSongs] = useState([])
   const [loading, setLoading] = useState(true)
   const [isLiked, setIsLiked] = useState(false)
-  const [myReview, setMyReview] = useState({ name: '', comment: '' })
+  const [myReview, setMyReview] = useState({
+    user_name: '',
+    review_data: { comment: '', song_id: '' },
+  })
 
   const defaultState = {
     id: '',
@@ -84,6 +87,13 @@ const Album = () => {
       type: 'DISPLAY_SONG',
       payload: song,
     })
+    fetch(`http://localhost:9292/albums/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        setAlbum(data)
+        setSongs(data.songs)
+      })
   }
 
   const handleLikeIcon = (song) => {
@@ -126,7 +136,12 @@ const Album = () => {
   const handleReviewForm = (e) => {
     setMyReview((myReview) => ({
       ...myReview,
+
       [e.target.name]: e.target.value,
+      review_data: {
+        [e.target.name]: e.target.value,
+        song_id: mySong.id,
+      },
     }))
   }
 
@@ -137,7 +152,7 @@ const Album = () => {
       payload: myReview,
     })
 
-    fetch(`http://localhost:9292/reviews/${mySong.id}`, {
+    fetch(`http://localhost:9292/reviews`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -209,7 +224,7 @@ const Album = () => {
 
               <p>
                 {mySong.likes}
-                <span>likes</span>
+                <span> likes</span>
               </p>
             </div>
             <div className='reviews'>
@@ -230,7 +245,7 @@ const Album = () => {
                   <label htmlFor='u-name'>Name:</label>
                   <input
                     type='text'
-                    name='name'
+                    name='user_name'
                     id='u-name'
                     required
                     onBlur={(e) => handleReviewForm(e)}
