@@ -2,9 +2,10 @@
 
 ## Table of contents
 * [Problem Statement](#PROBLEM-STATEMENT)
-* [Project contributors](#PROJECT-CONTRIBUTORS)
+* [Project Contributors](#PROJECT-CONTRIBUTORS)
 * [Project Description](#PROJECT-DESCRIPTION)
 * [Setting Up the project](#How-to-run-the-project)
+* [Important Links](#These-are-the-links-for-the-project)
 * [License and Copyright](#License-and-copyright)
 * [Final Remarks](#final-remarks)
 
@@ -15,11 +16,11 @@ To solve this problem, we came up with a web application (LIMCE.FREEDOM), where 
 
 ## PROJECT CONTRIBUTORS :
 
-<a href="https://github.com/authme-flophy">Eric Maina</a>
-<a href="https://github.com/doreenlulu">Doreen Lulu</a>
-<a href="https://github.com/iamkibeh">Immanuel Kibet</a>
-<a href="https://github.com/chelahcynthia">Cynthia Chelangat</a>
-<a href="https://github.com/codertinie">Martin Munyao</a>
+* <a href="https://github.com/authme-flophy">Eric Maina</a>
+* <a href="https://github.com/doreenlulu">Doreen Lulu</a>
+* <a href="https://github.com/iamkibeh">Immanuel Kibet</a>
+* <a href="https://github.com/chelahcynthia">Cynthia Chelangat</a>
+* <a href="https://github.com/codertinie">Martin Munyao</a>
 
 
 ## PROJECT DESCRIPTION
