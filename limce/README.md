@@ -14,7 +14,7 @@
 Several music web applications already exist in the internet but lack freedom of speech. Most of the latter filter out negative comments which are often regarded as hate speech, leaving only the best comments. Many a time, this leads to misconception about a particular song. Music happens to be an art form that transcends language and misguided expectations will do more harm than good.
 To solve this problem, we came up with a web application (LIMCE.FREEDOM), where honest reviews are needed, whether good or bad. 
 
-## PROJECT CONTRIBUTORS :
+## PROJECT CONTRIBUTORS 
 
 * <a href="https://github.com/authme-flophy">Eric Maina</a>
 * <a href="https://github.com/doreenlulu">Doreen Lulu</a>
