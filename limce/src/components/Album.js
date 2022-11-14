@@ -68,7 +68,6 @@ const Album = () => {
     fetch(`https://lit-wildwood-44010.herokuapp.com/albums/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setLoading(false);
         setAlbum(data);
         setSongs(data.songs);
@@ -78,9 +77,6 @@ const Album = () => {
         });
       });
   }, [id]);
-  console.log(album);
-  console.log(songs);
-  console.log(mySong);
 
   const handleSongClicked = (song) => {
     dispatch({
@@ -90,7 +86,6 @@ const Album = () => {
     fetch(`https://lit-wildwood-44010.herokuapp.com/albums/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setAlbum(data);
         setSongs(data.songs);
       });
@@ -116,9 +111,7 @@ const Album = () => {
           body: JSON.stringify({ likes: song.likes - 1 }),
         })
           .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-          })
+          .then((data) => {})
       : fetch(`https://lit-wildwood-44010.herokuapp.com/songs/${song.id}`, {
           method: "PATCH",
           headers: {
@@ -127,9 +120,7 @@ const Album = () => {
           body: JSON.stringify({ likes: song.likes + 1 }),
         })
           .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-          });
+          .then((data) => {});
     setIsLiked(!isLiked);
   };
 
@@ -158,9 +149,7 @@ const Album = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(myReview),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+    }).then((res) => res.json());
 
     e.target.reset();
   };
@@ -170,7 +159,6 @@ const Album = () => {
     navigate("/");
   };
 
-  console.log(myReview);
   return (
     <div className="parent-container">
       {loading ? (
