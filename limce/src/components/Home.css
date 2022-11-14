@@ -18,6 +18,7 @@
     object-fit: cover;
     z-index: 0;
     background-blend-mode: darken;
+   
 }
 
 .glass{
@@ -115,7 +116,7 @@
 }
 
 .image {
-    opacity: 1;
+  opacity: 1;
   display: block;
   width: 100%;
   transition: .5s ease;

@@ -1,0 +1,198 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+  background-image: url(https://res.cloudinary.com/dqzudkxg1/image/upload/v1668081523/albumpic_vthig7.jpg);
+  width: 100%;
+}
+
+.album_container {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.13);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header {
+  color: paleturquoise;
+  justify-content: center;
+  display: flex;
+  padding: 3rem;
+}
+.album_content {
+  background-color: rgba(34, 34, 34, 0);
+  /* backdrop-filter: blur(10px); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album_image {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 40px;
+  border-radius: 50%;
+}
+
+.image-card {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  animation: fadeLeftImage 4s both;
+}
+
+@keyframes fadeLeftImage {
+  from {
+    transform: rotate(25deg);
+    transform-origin: 0% 0%;
+  }
+  to {
+    transform: translateX(0);
+    transform: translateY(0);
+  }
+}
+
+.iframe_container {
+  width: 100%;
+  flex: 1;
+  margin:auto
+}
+
+.songs {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  position: relative;
+  color: darkblue;
+  margin: 5px;
+}
+
+.songs > li {
+  padding: 1.2rem 1rem;
+  margin: 1rem 0rem;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+}
+
+.reviews {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.review {
+  width: 60%;
+  margin: 1rem;
+  padding: 1rem;
+  /* background-color: #fed000; */
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+
+  border: 1px solid black;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 10px;
+}
+
+.add-review {
+  padding: 1rem;
+}
+
+.add-review .form-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-name-sec {
+  display: flex;
+  width: 60%;
+  margin-left: -1.2rem;
+  margin-bottom: 0.5rem;
+  background-color: #c1dfc4;
+}
+.add-review .form-review label {
+  padding: 0.5rem;
+}
+
+#u-name {
+  margin-right: -1.25rem;
+  width: 100%;
+}
+
+.add-review .form-review textarea {
+  margin-bottom: 0.8rem;
+  padding: 10px;
+  width: 60%;
+}
+.submit-btn {
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  border: none;
+}
+.submit-btn:hover {
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  /* color: black; */
+  padding: 0.7rem;
+  transition: 1s ease-in-out all;
+}
+
+#heart-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: red;
+  animation: heartbeat 3s linear 2s infinite normal both;
+}
+
+@keyframes heartbeat {
+  55% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.05);
+    opacity: 0.3;
+  }
+  85% {
+    transform: scale(1.45);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.liked-video {
+  fill: red;
+  width: 2.5rem;
+}
+.history-btn > button{
+background-color:aquamarine;
+border-radius: 10px;
+font-size: 20px;
+font-family: 'Courier New', Courier, monospace;
+transition: all .2s ease-in-out;
+}
+.history-btn > button:hover{
+  transform: scale(1.2);
+}
