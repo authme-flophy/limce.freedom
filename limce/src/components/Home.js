@@ -6,7 +6,7 @@ function Home() {
   const [albums, setAlbums] = useState([])
   const navigate = useNavigate()
   useEffect(() => {
-    fetch('http://localhost:9292/albums')
+    fetch('https://lit-wildwood-44010.herokuapp.com/albums')
       .then((res) => res.json())
       .then((data) => {
         setAlbums(data)
