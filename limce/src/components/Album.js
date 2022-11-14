@@ -171,6 +171,9 @@ const Album = () => {
         <p>Loading...</p>
       ) : (
         <div className='album_container'>
+          <div className='header'>
+          <h1>Albums</h1>
+          </div>
           <div className='album_content'>
             <div className='album_image'>
               <img
