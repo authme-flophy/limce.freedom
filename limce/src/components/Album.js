@@ -65,7 +65,7 @@ const Album = () => {
   const [mySong, dispatch] = useReducer(reducer, defaultState)
 
   useEffect(() => {
-    fetch(`http://localhost:9292/albums/${id}`)
+    fetch(`https://lit-wildwood-44010.herokuapp.com/albums/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
@@ -87,7 +87,7 @@ const Album = () => {
       type: 'DISPLAY_SONG',
       payload: song,
     })
-    fetch(`http://localhost:9292/albums/${id}`)
+    fetch(`https://lit-wildwood-44010.herokuapp.com/albums/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
@@ -108,7 +108,7 @@ const Album = () => {
         })
 
     isLiked
-      ? fetch(`http://localhost:9292/songs/${song.id}`, {
+      ? fetch(`https://lit-wildwood-44010.herokuapp.com/songs/${song.id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ const Album = () => {
           .then((data) => {
             console.log(data)
           })
-      : fetch(`http://localhost:9292/songs/${song.id}`, {
+      : fetch(`https://lit-wildwood-44010.herokuapp.com/songs/${song.id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -152,7 +152,7 @@ const Album = () => {
       payload: myReview,
     })
 
-    fetch(`http://localhost:9292/reviews`, {
+    fetch(`https://lit-wildwood-44010.herokuapp.com/reviews`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
